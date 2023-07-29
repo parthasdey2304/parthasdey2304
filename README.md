@@ -2,10 +2,6 @@
 
 <h1 align="center"><u>Hi there, I'm Partha Sarathi Dey! 👋</u><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h1>
 
-<!--
-**parthasdey2304/parthasdey2304** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
--->
-
 <p style="font-weight: 600;">Hello, I'm Partha Sarathi Dey, I am a First year student. I started coding when I was in my 5<sup>th</sup> grade. At present I am a Junior Frontend Web Developer.</p>
 
 - 🔭 I’m currently working on **ReactJS**
