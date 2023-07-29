@@ -31,7 +31,7 @@ My tech stack includes : HTML5, CSS3, JavaScript, TypeScript, ReactJS, NodeJS, E
 - 😄 Pronouns: He/Him
 - 📍 Location: Kolkata/India
 
-### My Tech Stack
+## My Tech Stack
 
 ![tech_stack-removebg-preview](https://github.com/parthasdey2304/parthasdey2304/assets/131694386/55052118-ba66-4b22-bc19-dc7ba5214487)
 
