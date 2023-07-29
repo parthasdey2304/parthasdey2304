@@ -31,3 +31,5 @@ Here are some ideas to get you started:
 - 📫 How to reach me: <a href="https://linkedin.com/in/sarathiparth">LinkedIn</a>
 - 😄 Pronouns: He/Him
 - 📍 Location: Kolkata/India
+
+![tech_stack-removebg-preview](https://github.com/parthasdey2304/parthasdey2304/assets/131694386/55052118-ba66-4b22-bc19-dc7ba5214487)
