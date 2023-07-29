@@ -34,3 +34,6 @@ My tech stack includes : HTML5, CSS3, JavaScript, TypeScript, ReactJS, NodeJS, E
 ### My Tech Stack
 
 ![tech_stack-removebg-preview](https://github.com/parthasdey2304/parthasdey2304/assets/131694386/55052118-ba66-4b22-bc19-dc7ba5214487)
+
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=parthasdey2304)](https://github.com/anuraghazra/github-readme-stats)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=parthasdey2304&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
