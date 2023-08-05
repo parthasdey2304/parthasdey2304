@@ -7,6 +7,7 @@
 - 🔭 I’m currently working on **ReactJS**
 - 🌱 I’m currently learning **Backend Web Development**
 - 👯 I’m looking to collaborate on **GitHub**
+- 🔥 I'm a **Linux enthusiast**
 - 🤔 I’m looking for help with **NodeJS**
 - 💬 Ask me about **Frontend Web Development**
 - 📫 How to reach me: <a href="https://linkedin.com/in/sarathiparth">LinkedIn</a>
