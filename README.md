@@ -1,4 +1,4 @@
-![Speed Coder Parth (1)](https://github.com/parthasdey2304/parthasdey2304/assets/131694386/2faf6903-3c05-46ce-8310-62c838809b1e)
+![Speed Coder Parth (2)](https://github.com/parthasdey2304/parthasdey2304/assets/131694386/b6e3ef7d-5800-44f5-9293-a5451689e670)
 
 <h1 align="center"><u>Hi there, I'm Partha Sarathi Dey! 👋</u><img src="https://media.giphy.com/media/mGcNjsfWAjY5AEZNw6/giphy.gif" width="50"></h1>
 
