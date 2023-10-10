@@ -17,8 +17,7 @@
 ## My Tech Stack
 
 ![tech_stack-removebg-preview](https://github.com/parthasdey2304/parthasdey2304/assets/131694386/55052118-ba66-4b22-bc19-dc7ba5214487)
-<!--
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=parthasdey2304&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=parthasdey2304&layout=compact&show_icons=true)](https://github.com/anuraghazra/github-readme-stats)
--->
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&layout=compact" alt="Top Languages">
+<img src="https://github-readme-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&count_private=true" alt="Stats">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&theme=blueberry&hide_border=fals" alt="Streak">
