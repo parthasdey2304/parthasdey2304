@@ -8,8 +8,8 @@
 - 🌱 I’m currently learning **Backend Web Development**
 - 👯 I’m looking to collaborate on **GitHub**
 - 🔥 I'm a **Linux enthusiast**
-- 🤔 I’m looking for help with **NodeJS**
-- 💬 Ask me about **Frontend Web Development**
+- 🤔 I’m looking for help with **BlockChain**
+- 💬 Ask me about **FullStack Web Development**
 - 📫 How to reach me: <a href="https://linkedin.com/in/sarathiparth">LinkedIn</a>
 - 😄 Pronouns: He/Him
 - 📍 Location: Kolkata/India
@@ -22,4 +22,4 @@
 <img src="https://github-readme-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&count_private=true" alt="Stats">
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&theme=blueberry&hide_border=fals" alt="Streak">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&width=100%&section=footer"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&width=100%&section=footer"/>
