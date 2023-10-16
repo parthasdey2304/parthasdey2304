@@ -24,4 +24,6 @@
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&theme=blueberry&hide_border=fals" alt="Streak">
 
 [![An image of @parthasdey2304's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/parthasdey2304)](https://holopin.io/@parthasdey2304)
+<div style="border: white 2px solid; width: 100%; height: 200px; background-color: red">
+</div>
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&width=100%&section=footer"/>
