@@ -33,7 +33,7 @@
 ![Backend Technologies](https://skillicons.dev/icons?i=nodejs,express,graphql,jest,django)
 
 #### Database & Tools
-![Database & Tools](https://skillicons.dev/icons?i=postgres,mongodb,redis)
+![Database & Tools](https://skillicons.dev/icons?i=mysql,postgres,firebase,mongodb,redis)
 
 #### DevOps & Cloud
 ![Others](https://skillicons.dev/icons?i=aws,docker,git,github,vercel,heroku,netlify,cloudflare)
