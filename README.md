@@ -27,19 +27,19 @@
 ![Languages](https://skillicons.dev/icons?i=java,js,ts,python,c,cpp,go,rust,dart,solidity)
 
 #### Frontend Technologies
-![Frontend Technologies](https://skillicons.dev/icons?i=react,redux,html,css,bootstrap,tailwind,materialui,jquery,nextjs,vuejs)
+![Frontend Technologies](https://skillicons.dev/icons?i=react,redux,html,css,bootstrap,tailwind,materialui,jquery,nextjs,vuejs,threejs)
 
 #### Backend Technologies
-![Backend Technologies](https://skillicons.dev/icons?i=nodejs,express,graphql,jest,django)
+![Backend Technologies](https://skillicons.dev/icons?i=nodejs,express,graphql,jest,flask,fastapi,django)
 
 #### Database & Tools
 ![Database & Tools](https://skillicons.dev/icons?i=mysql,postgres,firebase,mongodb,redis)
 
 #### DevOps & Cloud
-![Others](https://skillicons.dev/icons?i=aws,docker,git,github,vercel,heroku,netlify,cloudflare)
+![Others](https://skillicons.dev/icons?i=aws,docker,git,github,vercel,heroku,netlify,cloudflare,kubernetes)
 
 #### Other tools & Technologies
-![Others](https://skillicons.dev/icons?i=markdown,regex,vscode,visualstudio,linux,bash,vim,emacs,powershell,postman,selenium,vite,latex,figma)
+![Others](https://skillicons.dev/icons?i=markdown,regex,vscode,visualstudio,linux,bash,vim,emacs,neovim,selenium,vite,latex,figma)
 
 # GitHub Stats
 
