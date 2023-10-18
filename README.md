@@ -24,7 +24,7 @@
 
 # Skills
 #### Programming Languages
-![Languages](https://skillicons.dev/icons?i=java,js,ts,python,c,cpp,go)
+![Languages](https://skillicons.dev/icons?i=java,js,ts,python,c,cpp,go,rust,dart,solidity)
 
 #### Frontend Technologies
 ![Frontend Technologies](https://skillicons.dev/icons?i=react,redux,html,css,bootstrap,tailwind,materialui,jquery,nextjs,vuejs)
