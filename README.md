@@ -22,6 +22,31 @@
 
 -->
 
+# Stay Connected
+<div style="display: flex;">
+  <a href="https://linkedin.com/in/sarathiparth">
+    <img src="https://skillicons.dev/icons?i=linkedin" src="linkedin-icon">
+  </a>
+  <a href="https://twitter.com/vastavik_parth">
+    <img src="https://skillicons.dev/icons?i=twitter" src="github-icon">
+  </a>
+  <a href="https://github.com/parthasdey2304">
+    <img src="https://skillicons.dev/icons?i=github" src="github-icon">
+  </a>
+  <a href="https://instagram.com/vastavik_parth">
+    <img src="https://skillicons.dev/icons?i=instagram" src="instagram-icon">
+  </a>
+  <a href="https://instagram.com/vastavik_parth](https://stackoverflow.com/users/22766881/partha-sarathi-dey">
+    <img src="https://skillicons.dev/icons?i=stackoverflow" src="stackoverflow-icon">
+  </a>
+  <a href="https://www.youtube.com/@speedcoderparth">
+    <img src="https://skillicons.dev/icons?i=yt" src="youtube-icon">
+  </a>
+  <a href="https://www.reddit.com/user/parthasdey2304">
+    <img src="https://skillicons.dev/icons?i=reddit" src="reddit-icon">
+  </a>
+</div>
+
 # Skills
 #### Programming Languages
 ![Languages](https://skillicons.dev/icons?i=java,js,ts,python,c,cpp,go,rust,dart,solidity,kotlin)
