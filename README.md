@@ -34,7 +34,7 @@
     <img src="https://skillicons.dev/icons?i=github" src="github-icon">
   </a>
   <a href="https://instagram.com/vastavik_parth">
-    <img src="https://skillicons.dev/icons?i=instagram" src="instagram-icon">
+    <img src="https://skillicons.dev/icons?i=instagram" src="instagram-icn">
   </a>
   <a href="https://instagram.com/vastavik_parth](https://stackoverflow.com/users/22766881/partha-sarathi-dey">
     <img src="https://skillicons.dev/icons?i=stackoverflow" src="stackoverflow-icon">
