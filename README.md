@@ -22,6 +22,8 @@
 
 -->
 
+![](https://komarev.com/ghpvc/?username=parthasdey2304&color=blue)
+
 # Stay Connected
 <div style="display: flex;">
   <a href="https://linkedin.com/in/sarathiparth">
