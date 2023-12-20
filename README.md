@@ -22,7 +22,7 @@
 
 -->
 
-![](https://komarev.com/ghpvc/?username=parthasdey2304&color=blue&label=VISITORS)
+![](https://komarev.com/ghpvc/?username=parthasdey2304&color=blue&label=PROFILE+VISITORS)
 
 # Stay Connected
 <div style="display: flex;">
