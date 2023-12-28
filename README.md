@@ -72,7 +72,8 @@
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&layout=compact" alt="Top Languages">
 <img src="https://github-readme-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&count_private=true" alt="Stats">
-<!-- <img src="https://github-readme-streak-stats.herokuapp.com?user=parthasdey2304&theme=blueberry&border_radius=20" alt="Streak"> -->
+<!-- <a href="http://www.github.com/parthasdey2304"><img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&stroke=000000&background=1c1917&ring=white&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a> -->
+<img src="https://github-readme-streak-stats.herokuapp.com?user=parthasdey2304&theme=blueberry&border_radius=5" alt="Streak">
 
 # Open Source
 
