@@ -29,7 +29,7 @@
   <a href="https://linkedin.com/in/sarathiparth">
     <img src="https://skillicons.dev/icons?i=linkedin" src="linkedin-icon">
   </a>
-  <a href="https://twitter.com/vastavik_parth">
+  <a href="https://twitter.com/vastavik__parth">
     <img src="https://skillicons.dev/icons?i=twitter" src="github-icon">
   </a>
   <a href="https://github.com/parthasdey2304">
