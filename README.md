@@ -41,12 +41,12 @@
   <a href="https://instagram.com/vastavik_parth](https://stackoverflow.com/users/22766881/partha-sarathi-dey">
     <img src="https://skillicons.dev/icons?i=stackoverflow" src="stackoverflow-icon">
   </a>
-  <a href="https://www.youtube.com/@speedcoderparth">
-    <img src="https://skillicons.dev/icons?i=yt" src="youtube-icon">
+<!--   <a href="https://www.youtube.com/@speedcoderparth">
+    <img src="https://skillicons.dev/icons?i=youtube" src="youtube-icon">
   </a>
   <a href="https://www.reddit.com/user/parthasdey2304">
     <img src="https://skillicons.dev/icons?i=reddit" src="reddit-icon">
-  </a>
+  </a> -->
 </div>
 
 # Skills
@@ -72,6 +72,8 @@
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&layout=compact" alt="Top Languages">
 <img src="https://github-readme-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&count_private=true" alt="Stats">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&theme=blueberry&hide_border=false&border_radius=5">
+<!-- <img src="https://github-contributor-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true"> -->
 <!-- <a href="http://www.github.com/parthasdey2304"><img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&stroke=000000&background=1c1917&ring=white&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a> -->
 <!-- <a href="https://github-readme-streak-stats.herokuapp.com?user=parthasdey2304&theme=blueberry&border_radius=5"> -->
 
