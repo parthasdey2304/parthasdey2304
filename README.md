@@ -73,12 +73,13 @@
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&layout=compact" alt="Top Languages">
 <img src="https://github-readme-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true&hide_border=false&count_private=true" alt="Stats">
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&theme=blueberry&hide_border=false&border_radius=5">
+<a href="https://roadmap.sh"><img src="https://roadmap.sh/card/wide/66fbdcf767700438b4859421?variant=dark" alt="roadmap.sh"/></a>
 <!-- <img src="https://github-contributor-stats.vercel.app/api?username=parthasdey2304&theme=blueberry&show_icons=true"> -->
 <!-- <a href="http://www.github.com/parthasdey2304"><img src="https://github-readme-streak-stats.herokuapp.com/?user=parthasdey2304&stroke=000000&background=1c1917&ring=white&fire=0891b2&currStreakNum=ffffff&currStreakLabel=0891b2&sideNums=ffffff&sideLabels=ffffff&dates=ffffff&hide_border=true" /></a> -->
 <!-- <a href="https://github-readme-streak-stats.herokuapp.com?user=parthasdey2304&theme=blueberry&border_radius=5"> -->
 
 # Open Source
 
-[![An image of @parthasdey2304's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/parthasdey2304)](https://holopin.io/@parthasdey2304)
+![An image of @parthasdey2304's Holopin badges, which is a link to view their full Holopin profile](https://holopin.me/parthasdey2304)](https://holopin.io/@parthasdey2304)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&width=100%&section=footer"/>
