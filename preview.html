@@ -1,0 +1,421 @@
+<!-- Save as preview.html — standalone interactive demo. Open directly in any browser. -->
+<!-- Deploy via Netlify Drop / Vercel / GitHub Pages, then GIF-record for README. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parth Vastavik // AI & Full-Stack Engineer</title>
+
+  <!-- Virgil (Excalidraw) Font -->
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/virgil" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: #05070a;
+      color: #ffffff;
+      font-family: 'Virgil', cursive, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* 3D Interactive Canvas covering viewport */
+    #gridCanvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: auto;
+    }
+
+    /* Excalidraw Window / Card Container */
+    .modal-container {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      max-width: 480px;
+      width: 90%;
+      animation: floatIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes floatIn {
+      from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* Top Pill - Hand-drawn Excalidraw Style */
+    .top-pill {
+      background: #0d1117;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      padding: 6px 18px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 3px 3px 0px rgba(255, 255, 255, 0.9);
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #ffffff;
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px #ffffff;
+    }
+
+    /* Main Hand-drawn Box */
+    .rough-box {
+      background: #090d14;
+      border: 2.5px solid #ffffff;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      box-shadow: 6px 6px 0px #ffffff;
+      padding: 28px 24px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    /* Header Section */
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 2px dashed #30363d;
+      padding-bottom: 16px;
+    }
+
+    .badge-icon {
+      border: 2px solid #ffffff;
+      padding: 6px 10px;
+      border-radius: 12px 4px 14px 5px;
+      font-size: 18px;
+      font-weight: 700;
+      background: #161b22;
+      box-shadow: 2px 2px 0px #ffffff;
+    }
+
+    .header-text h1 {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+    }
+
+    .header-text p {
+      font-size: 13px;
+      color: #8b949e;
+      margin-top: 2px;
+    }
+
+    /* Info Badge / Terminal Callout */
+    .notice-box {
+      background: #111620;
+      border: 1.5px solid #ffffff;
+      border-radius: 10px 200px 12px 180px/180px 12px 200px 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.4;
+      color: #e6edf3;
+      display: flex;
+      gap: 8px;
+    }
+
+    /* Tags / Stack Pills */
+    .tech-stack-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-tag {
+      background: #161b22;
+      border: 1.5px solid #ffffff;
+      padding: 4px 10px;
+      font-size: 12px;
+      border-radius: 200px 15px 180px 15px/15px 180px 15px 200px;
+      box-shadow: 2px 2px 0px #ffffff;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    .tech-tag:hover {
+      transform: translateY(-2px);
+      background: #ffffff;
+      color: #000000;
+    }
+
+    /* Sketch Input Simulation */
+    .sketch-input {
+      background: #0d1117;
+      border: 2px solid #ffffff;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      padding: 10px 14px;
+      font-family: 'Virgil', cursive, sans-serif;
+      font-size: 13px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sketch-input span.label {
+      color: #8b949e;
+    }
+
+    .sketch-input span.val {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* Hand-drawn Button */
+    .btn-action {
+      background: #ffffff;
+      color: #05070a;
+      border: 2.5px solid #ffffff;
+      border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+      padding: 12px;
+      font-family: 'Virgil', cursive, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 4px 4px 0px rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      display: block;
+      transition: all 0.15s ease;
+    }
+
+    .btn-action:hover {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px rgba(255, 255, 255, 0.8);
+      background: #e6edf3;
+    }
+
+    /* Footer Meta */
+    .card-footer {
+      font-size: 11px;
+      color: #6e7681;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Warp 3D Grid Canvas -->
+  <canvas id="gridCanvas"></canvas>
+
+  <!-- Hand-drawn Profile Window -->
+  <div class="modal-container">
+    <div class="top-pill">
+      <span class="status-dot"></span>
+      AUTONOMOUS AI AGENTS &bull; GRAPHRAG ACTIVE
+    </div>
+
+    <div class="rough-box">
+      <!-- Header -->
+      <div class="card-header">
+        <div class="badge-icon">&lt;/&gt;</div>
+        <div class="header-text">
+          <h1>PARTH VASTAVIK</h1>
+          <p>GenAI Engineer &amp; Full-Stack Architect</p>
+        </div>
+      </div>
+
+      <!-- Overview -->
+      <div class="notice-box">
+        <span>⚡</span>
+        <span>
+          Architecting low-latency LLM orchestration, GraphRAG reasoning, and high-throughput microservices.
+        </span>
+      </div>
+
+      <!-- Modern AI Tech Stack Badges -->
+      <div class="tech-stack-grid">
+        <div class="tech-tag">FastAPI</div>
+        <div class="tech-tag">LangChain</div>
+        <div class="tech-tag">Langbase</div>
+        <div class="tech-tag">Neo4j (GraphRAG)</div>
+        <div class="tech-tag">Vector DB (Pinecone/Chroma)</div>
+        <div class="tech-tag">Agentic Workflows</div>
+        <div class="tech-tag">React / Next.js</div>
+        <div class="tech-tag">Neovim / Linux</div>
+      </div>
+
+      <!-- Architecture Specs -->
+      <div class="sketch-input">
+        <span class="label">CORE BACKEND:</span>
+        <span class="val">Python Async &bull; FastAPI</span>
+      </div>
+      <div class="sketch-input">
+        <span class="label">KNOWLEDGE ENGINE:</span>
+        <span class="val">Neo4j + Hybrid Vector RAG</span>
+      </div>
+
+      <!-- Primary Action Button -->
+      <a href="https://linkedin.com/in/sarathiparth" target="_blank" class="btn-action">
+        CONNECT ON LINKEDIN &rarr;
+      </a>
+
+      <!-- Card Sub-Footer -->
+      <div class="card-footer">
+        <span>📍 Kolkata, India</span>
+        <span>GITHUB: @parthasdey2304</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("gridCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let width = (canvas.width = window.innerWidth);
+    let height = (canvas.height = window.innerHeight);
+
+    // Mouse coordinates (defaults off-screen)
+    let mouse = { x: -1000, y: -1000 };
+    let smoothMouse = { x: -1000, y: -1000 };
+
+    // Expose hooks for automated capture (record.js / Playwright):
+    // window.__setMouse(x, y) lets the recorder drive an organic path.
+    // window.__heroReady flags first-frame render for waitForFunction.
+    window.__setMouse = (x, y) => { mouse.x = x; mouse.y = y; };
+    window.__heroReady = false;
+
+    window.addEventListener("resize", () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    });
+
+    window.addEventListener("mouseleave", () => {
+      mouse.x = -1000;
+      mouse.y = -1000;
+    });
+
+    // Grid Configuration
+    const GRID_SPACING = 34; // distance between grid lines
+    const LENS_RADIUS = 160; // radius of the 3D lens bulb
+    const DISTORTION_STRENGTH = 40; // outward displacement force
+
+    function drawGrid() {
+      // Background clear
+      ctx.fillStyle = "#05070a";
+      ctx.fillRect(0, 0, width, height);
+
+      // Smooth mouse easing for fluid organic response
+      smoothMouse.x += (mouse.x - smoothMouse.x) * 0.15;
+      smoothMouse.y += (mouse.y - smoothMouse.y) * 0.15;
+
+      ctx.lineWidth = 1;
+      ctx.strokeStyle = "#1b222d";
+
+      // 1. Draw Vertical Distorted Grid Lines
+      for (let x = 0; x <= width; x += GRID_SPACING) {
+        ctx.beginPath();
+        for (let y = 0; y <= height; y += 8) {
+          const dx = x - smoothMouse.x;
+          const dy = y - smoothMouse.y;
+          const dist = Math.hypot(dx, dy);
+
+          let offsetX = 0;
+          if (dist < LENS_RADIUS) {
+            // Spherical 3D dome curvature formula
+            const factor = Math.cos((dist / LENS_RADIUS) * (Math.PI / 2));
+            offsetX = (dx / (dist || 1)) * factor * DISTORTION_STRENGTH;
+          }
+
+          if (y === 0) {
+            ctx.moveTo(x + offsetX, y);
+          } else {
+            ctx.lineTo(x + offsetX, y);
+          }
+        }
+        ctx.stroke();
+      }
+
+      // 2. Draw Horizontal Distorted Grid Lines
+      for (let y = 0; y <= height; y += GRID_SPACING) {
+        ctx.beginPath();
+        for (let x = 0; x <= width; x += 8) {
+          const dx = x - smoothMouse.x;
+          const dy = y - smoothMouse.y;
+          const dist = Math.hypot(dx, dy);
+
+          let offsetY = 0;
+          if (dist < LENS_RADIUS) {
+            const factor = Math.cos((dist / LENS_RADIUS) * (Math.PI / 2));
+            offsetY = (dy / (dist || 1)) * factor * DISTORTION_STRENGTH;
+          }
+
+          if (x === 0) {
+            ctx.moveTo(x, y + offsetY);
+          } else {
+            ctx.lineTo(x, y + offsetY);
+          }
+        }
+        ctx.stroke();
+      }
+
+      // 3. Subtle White Spotlight Glow following the cursor
+      if (smoothMouse.x > -500 && smoothMouse.y > -500) {
+        const spotlight = ctx.createRadialGradient(
+          smoothMouse.x,
+          smoothMouse.y,
+          0,
+          smoothMouse.x,
+          smoothMouse.y,
+          LENS_RADIUS * 1.1
+        );
+        spotlight.addColorStop(0, "rgba(255, 255, 255, 0.16)");
+        spotlight.addColorStop(0.5, "rgba(255, 255, 255, 0.04)");
+        spotlight.addColorStop(1, "rgba(255, 255, 255, 0)");
+
+        ctx.fillStyle = spotlight;
+        ctx.beginPath();
+        ctx.arc(smoothMouse.x, smoothMouse.y, LENS_RADIUS * 1.1, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      window.__heroReady = true;
+      requestAnimationFrame(drawGrid);
+    }
+
+    drawGrid();
+  </script>
+</body>
+</html>
