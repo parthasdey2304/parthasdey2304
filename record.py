@@ -34,31 +34,41 @@ GRID = (27, 34, 45)
 
 def _load_fonts():
     from PIL import ImageFont
-    candidates_bold = [
-        "C:/Windows/Fonts/arialbd.ttf",
-        "C:/Windows/Fonts/DejaVuSans-Bold.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-    ]
-    candidates_reg = [
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                        "assets", "fonts", "PatrickHand-Regular.ttf")
+    if not os.path.exists(path):
+        import urllib.request
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        url = ("https://raw.githubusercontent.com/google/fonts/main/"
+               "ofl/patrickhand/PatrickHand-Regular.ttf")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req) as r, open(path, "wb") as f:
+            f.write(r.read())
+    alts = [
         "C:/Windows/Fonts/arial.ttf",
         "C:/Windows/Fonts/DejaVuSans.ttf",
         "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
     ]
-    def pick(cands, size):
-        for p in cands:
-            if os.path.exists(p):
+
+    def load(size):
+        try:
+            return ImageFont.truetype(path, size)
+        except Exception:
+            pass
+        for a in alts:
+            if os.path.exists(a):
                 try:
-                    return ImageFont.truetype(p, size)
+                    return ImageFont.truetype(a, size)
                 except Exception:
                     continue
         return ImageFont.load_default()
     return {
-        "title": pick(candidates_bold, 30),
-        "sub": pick(candidates_reg, 15),
-        "tag": pick(candidates_reg, 13),
-        "small": pick(candidates_reg, 12),
-        "pill": pick(candidates_bold, 12),
-        "btn": pick(candidates_bold, 15),
+        "title": load(34),
+        "sub": load(16),
+        "tag": load(14),
+        "small": load(13),
+        "pill": load(13),
+        "btn": load(17),
     }
 
 
@@ -147,7 +157,7 @@ def draw_card(draw, fonts):
     tags = ["FastAPI", "LangChain", "Langbase", "Neo4j", "Vector DB", "RAG", "Next.js", "Linux"]
     tx, ty = cx0, 206
     for tag in tags:
-        tw = len(tag) * 8 + 22
+        tw = int(draw.textlength(tag, font=fonts["tag"])) + 24
         if tx + tw > card[2] - 24:
             tx, ty = cx0, ty + 30
         draw.rounded_rectangle([tx + 2, ty + 2, tx + tw + 2, ty + 24], radius=10, fill=(255, 255, 255))
@@ -165,17 +175,24 @@ def draw_card(draw, fonts):
         draw.text((cx0 + 12, y + 6), k, font=fonts["small"], fill=(139, 148, 158))
         draw.text((cx0 + 110, y + 6), v, font=fonts["small"], fill=(255, 255, 255))
 
-    # CTA button
+    # CTA button (arrow drawn manually; Patrick Hand lacks U+2192)
     btn = [cx0, 342, card[2] - 24, 372]
     draw.rounded_rectangle([b + 3 for b in btn], radius=12, fill=(90, 90, 90))
     draw.rounded_rectangle(btn, radius=12, fill=(255, 255, 255))
-    draw.text((cx0 + 108, 349), "CONNECT ON LINKEDIN  →", font=fonts["btn"], fill=(5, 7, 10))
+    btn_text = "CONNECT ON LINKEDIN"
+    btw = draw.textlength(btn_text, font=fonts["btn"])
+    total = btw + 34
+    bx = cx0 + ((card[2] - 24) - cx0 - total) / 2
+    by = 347
+    draw.text((bx, by), btn_text, font=fonts["btn"], fill=(5, 7, 10))
+    ax, ay = bx + btw + 12, by + 11
+    draw.line([(ax, ay), (ax + 15, ay)], fill=(5, 7, 10), width=2)
+    draw.line([(ax + 10, ay - 5), (ax + 15, ay)], fill=(5, 7, 10), width=2)
+    draw.line([(ax + 10, ay + 5), (ax + 15, ay)], fill=(5, 7, 10), width=2)
 
     # footer
     draw.text((cx0, 384), "Kolkata, India", font=fonts["small"], fill=(110, 118, 129))
     draw.text((card[2] - 190, 384), "GITHUB: @parthasdey2304", font=fonts["small"], fill=(110, 118, 129))
-    # location footer strip
-    draw.text((cx0, 404), "preview.html  •  interactive canvas demo", font=fonts["small"], fill=(70, 76, 85))
 
 
 def render_fallback():
